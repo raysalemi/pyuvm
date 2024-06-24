@@ -4,7 +4,7 @@
  *
  * Sphinx stylesheet -- business style theme.
  *
- * :copyright: Copyright 2011-2014 by Sphinx team, see AUTHORS.
+ * :copyright: Copyright 2007-2024 by Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -39,6 +39,11 @@ div.document {
     -webkit-box-shadow: 2px 2px 5px #000;
 }
 
+div.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
 div.bodywrapper {
     margin: 0 0 0 240px;
     border-left: 1px solid #ccc;
@@ -47,6 +52,9 @@ div.bodywrapper {
 div.body {
     margin: 0;
     padding: 0.5em 20px 20px 20px;
+}
+div.bodywrapper {
+    margin: 0 0 0 calc(550px + 30px);
 }
 
 div.related {
@@ -94,9 +102,8 @@ div.sphinxsidebarwrapper {
 }
 
 div.sphinxsidebar {
-    margin: 0;
     padding: 0.5em 12px 12px 12px;
-    width: 210px;
+    width: 550px;
     font-size: 1em;
     text-align: left;
 }
@@ -161,6 +168,10 @@ a {
 a:hover {
     color: #336699;
     text-decoration: underline;
+}
+
+a:visited {
+    color: #551a8b;
 }
 
 div.body a {
@@ -288,6 +299,8 @@ div.quotebar {
     border: 1px solid #ccc;
 }
 
+nav.contents,
+aside.topic,
 div.topic {
     background-color: #f8f8f8;
 }
