@@ -30,6 +30,9 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="modules.html" title="pyuvm"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -50,8 +53,80 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
-<section id="pyuvm-error-classes-module">
-<h2>pyuvm.error_classes module<a class="headerlink" href="#pyuvm-error-classes-module" title="Link to this heading">¶</a></h2>
+<section id="module-pyuvm.error_classes">
+<span id="pyuvm-error-classes-module"></span><h2>pyuvm.error_classes module<a class="headerlink" href="#module-pyuvm.error_classes" title="Link to this heading">¶</a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMBadPhase">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMBadPhase</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMBadPhase" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>Errors in phasing</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMConfigError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMConfigError</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMConfigError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>Errors using the config_db</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMConfigItemNotFound">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMConfigItemNotFound</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMConfigItemNotFound" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>Couldn’t find something in config_db</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMError</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>All UVM Errors</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMFactoryError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMFactoryError</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMFactoryError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>For cases where a type is not registered with the factory</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMFatalError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMFatalError</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMFatalError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>Used to dump out of the testbench</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMNotImplemented">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMNotImplemented</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMNotImplemented" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>For methods that we haven’t yet implemented.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMSequenceError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMSequenceError</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMSequenceError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>Errors using sequences</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UVMTLMConnectionError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UVMTLMConnectionError</span></span><a class="headerlink" href="#pyuvm.error_classes.UVMTLMConnectionError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>For problems connecting TLM</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyuvm.error_classes.UsePythonMethod">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyuvm.error_classes.</span></span><span class="sig-name descname"><span class="pre">UsePythonMethod</span></span><a class="headerlink" href="#pyuvm.error_classes.UsePythonMethod" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyuvm.error_classes.UVMError" title="pyuvm.error_classes.UVMError"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVMError</span></code></a></p>
+<p>For cases where the user should use a Python
+method rather than a UVM method.  For example
+use __str__() instead of convert2string()</p>
+</dd></dl>
+
 </section>
 <section id="pyuvm-extension-classes-module">
 <h2>pyuvm.extension_classes module<a class="headerlink" href="#pyuvm-extension-classes-module" title="Link to this heading">¶</a></h2>
@@ -133,7 +208,19 @@
     <ul>
 <li><a class="reference internal" href="#">pyuvm package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#pyuvm-error-classes-module">pyuvm.error_classes module</a></li>
+<li><a class="reference internal" href="#module-pyuvm.error_classes">pyuvm.error_classes module</a><ul>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMBadPhase"><code class="docutils literal notranslate"><span class="pre">UVMBadPhase</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMConfigError"><code class="docutils literal notranslate"><span class="pre">UVMConfigError</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMConfigItemNotFound"><code class="docutils literal notranslate"><span class="pre">UVMConfigItemNotFound</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMError"><code class="docutils literal notranslate"><span class="pre">UVMError</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMFactoryError"><code class="docutils literal notranslate"><span class="pre">UVMFactoryError</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMFatalError"><code class="docutils literal notranslate"><span class="pre">UVMFatalError</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMNotImplemented"><code class="docutils literal notranslate"><span class="pre">UVMNotImplemented</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMSequenceError"><code class="docutils literal notranslate"><span class="pre">UVMSequenceError</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UVMTLMConnectionError"><code class="docutils literal notranslate"><span class="pre">UVMTLMConnectionError</span></code></a></li>
+<li><a class="reference internal" href="#pyuvm.error_classes.UsePythonMethod"><code class="docutils literal notranslate"><span class="pre">UsePythonMethod</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#pyuvm-extension-classes-module">pyuvm.extension_classes module</a></li>
 <li><a class="reference internal" href="#pyuvm-s05-base-classes-module">pyuvm.s05_base_classes module</a></li>
 <li><a class="reference internal" href="#pyuvm-s06-reporting-classes-module">pyuvm.s06_reporting_classes module</a></li>
@@ -198,6 +285,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="modules.html" title="pyuvm"
              >next</a> |</li>
