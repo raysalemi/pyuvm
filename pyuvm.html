@@ -173,7 +173,7 @@ do_copy()</p>
 are the same.</p>
 </dd>
 </dl>
-<p>Compares one uvm_object to another uvm_object using 
+<p>Compares one uvm_object to another uvm_object using
 the user-overridden <code class="docutils literal notranslate"><span class="pre">`do_compare()</span></code> function.</p>
 </dd></dl>
 
@@ -682,8 +682,10 @@ is marked as acted upon</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>requested_type</strong> – Type type to be overridden</p></li>
-<li><p><strong>parent_inst_path</strong> – The inst path if we are looking for inst overrides</p></li>
-<li><p><strong>name</strong> – Concatenated with parent_inst_path if it exists for inst overrides</p></li>
+<li><p><strong>parent_inst_path</strong> – The inst path if we are looking
+for inst overrides</p></li>
+<li><p><strong>name</strong> – Concatenated with parent_inst_path if it
+exists for inst overrides</p></li>
 <li><p><strong>parent</strong> – The parent component</p></li>
 </ul>
 </dd>
@@ -863,11 +865,12 @@ the names of the types.
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>original_type_name</strong> – The name of the type to be 
+<li><p><strong>original_type_name</strong> – The name of the type to be
 overridden or an arbitrary string.</p></li>
-<li><p><strong>override_type_name</strong> – The name of the overriding type. 
+<li><p><strong>override_type_name</strong> – The name of the overriding type.
 It must have been declared.</p></li>
-<li><p><strong>replace</strong> – If the override already exists only replace if this is True</p></li>
+<li><p><strong>replace</strong> – If the override already exists only replace
+if this is True</p></li>
 </ul>
 </dd>
 </dl>
