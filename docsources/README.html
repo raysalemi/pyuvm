@@ -63,8 +63,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#the-tinyalubfm-in-tinyalu-utils-py">The <code class="docutils literal notranslate"><span class="pre">TinyAluBfm</span></code> in <code class="docutils literal notranslate"><span class="pre">tinyalu_utils.py</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#the-pyuvm-testbench">The <code class="docutils literal notranslate"><span class="pre">pyuvm</span></code> testbench</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#importing-pyuvm">Importing <code class="docutils literal notranslate"><span class="pre">pyuvm</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#the-pyuvm-testbench">The <strong>pyuvm</strong> testbench</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#importing-pyuvm">Importing <strong>pyuvm</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-alutest-classes">The AluTest classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-aluenv-class">The ALUEnv Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-monitor">The Monitor</a></li>
@@ -275,16 +275,16 @@ object<span class="w"> </span>name:<span class="w"> </span>my_object
 </section>
 </section>
 <section id="the-pyuvm-testbench">
-<h1>The <code class="docutils literal notranslate"><span class="pre">pyuvm</span></code> testbench<a class="headerlink" href="#the-pyuvm-testbench" title="Link to this heading"></a></h1>
+<h1>The <strong>pyuvm</strong> testbench<a class="headerlink" href="#the-pyuvm-testbench" title="Link to this heading"></a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">testbench.py</span></code> contains the entire UVM testbench and connects to the TinyALU through a <code class="docutils literal notranslate"><span class="pre">TinyAluBfm</span></code> object defined in <code class="docutils literal notranslate"><span class="pre">tinyalu_utils.py</span></code>.  We’ll examine the <code class="docutils literal notranslate"><span class="pre">testbench.py</span></code> file and enough of the <strong>cocotb</strong> test too run the simlation</p>
 <section id="importing-pyuvm">
-<h2>Importing <code class="docutils literal notranslate"><span class="pre">pyuvm</span></code><a class="headerlink" href="#importing-pyuvm" title="Link to this heading"></a></h2>
+<h2>Importing <strong>pyuvm</strong><a class="headerlink" href="#importing-pyuvm" title="Link to this heading"></a></h2>
 <p>Testbenches written in the SystemVerilog UVM usually import the package like this:</p>
 <div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">uvm_pkg::*</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This gives you access to the class names without needing a package path.  To get
-similar behavior with <code class="docutils literal notranslate"><span class="pre">pyuvm</span></code> us the <code class="docutils literal notranslate"><span class="pre">from</span></code> import syntax. We import <code class="docutils literal notranslate"><span class="pre">pyuvm</span></code> to distinguish the <code class="docutils literal notranslate"><span class="pre">&#64;pyuvm.test()</span></code> decorator from the <code class="docutils literal notranslate"><span class="pre">&#64;cocotb.test()</span></code> decorator:</p>
+similar behavior with <strong>pyuvm</strong> us the <code class="docutils literal notranslate"><span class="pre">from</span></code> import syntax. We import <strong>pyuvm</strong> to distinguish the <code class="docutils literal notranslate"><span class="pre">&#64;pyuvm.test()</span></code> decorator from the <code class="docutils literal notranslate"><span class="pre">&#64;cocotb.test()</span></code> decorator:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyuvm</span>
 <span class="kn">from</span> <span class="nn">pyuvm</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
@@ -568,7 +568,7 @@ similar behavior with <code class="docutils literal notranslate"><span class="pr
 </section>
 <section id="contributing">
 <h1>Contributing<a class="headerlink" href="#contributing" title="Link to this heading"></a></h1>
-<p>You can contribute to <code class="docutils literal notranslate"><span class="pre">pyuvm</span></code> by forking this repository and submitting pull requests.</p>
+<p>You can contribute to <strong>pyuvm</strong> by forking this repository and submitting pull requests.</p>
 <p>The repository runs all needed tests using <code class="docutils literal notranslate"><span class="pre">tox</span></code>.  The test runs
 <code class="docutils literal notranslate"><span class="pre">flake8</span></code> and fails if that linter finds any issues.  Visual Studio Code
 can be set up to automatically check <code class="docutils literal notranslate"><span class="pre">flake8</span></code> issues.  The repository
