@@ -1,4 +1,8 @@
-from pyuvm import uvm_callback, uvm_callback_iter, uvm_callbacks
+from pyuvm.s10_synchronization_classes import (
+    uvm_callback,
+    uvm_callback_iter,
+    uvm_callbacks,
+)
 
 __all__ = [
     "uvm_reg_cbs",
