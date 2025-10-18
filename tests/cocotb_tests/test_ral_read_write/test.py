@@ -218,7 +218,6 @@ class ral_test_rd(uvm_test):
         self.ral_map.reset("HARD")
         registers = self.environment.ral.def_map.get_registers()
         for rg in registers:
-            logger.debug(f"{rg.get_address()=}: {rg.get()=}")
             (status, data) = await rg.read(
                 uvm_door_e.UVM_FRONTDOOR, self.ral_map
             )
