@@ -1,0 +1,54 @@
+name: Private AI Repository Reviewer
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issues:
+    types: [opened]
+
+jobs:
+  evaluate-and-email:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check out the repository files
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Run the AI Engine to evaluate the PR or Issue
+      - name: Generate AI Evaluation
+        id: gemini-review
+        uses: google-github-actions/run-gemini-cli@v1
+        env:
+          GEMINI_TRUST_WORKSPACE: 'false'
+        with:
+          openai_api_key: ${{ secrets.GEMINI_API_KEY }}
+          prompt: |
+            You are a private code maintainer assistant. Evaluate this activity:
+            Event Type: ${{ github.event_name }}
+            Title: ${{ github.event.issue.title || github.event.pull_request.title }}
+            Body text: ${{ github.event.issue.body || github.event.pull_request.body }}
+            
+            Provide a private evaluation structured as follows:
+            1. SUMMARY: Explain what these changes or reported problems mean in simple terms.
+            2. IMPACT: What areas of my codebase will this affect?
+            3. RISK ASSESSMENT: Are there potential bugs, security flaws, or breaking changes?
+            4. RECOMMENDATION: Give me a clear "Merge", "Request Changes", or "Close" recommendation with a brief justification.
+
+      # 3. Securely email the raw output to your inbox
+      - name: Send Private Review Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ://gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "[AI Review] New ${{ github.event_name }} on ${{ github.repository }}"
+          to: ${{ secrets.EMAIL_USERNAME }}
+          from: Gemini AI Assistant
+          body: |
+            Hello Maintainer! The AI engine has completed a private evaluation.
+            
+            Link to Activity: ${{ github.event.issue.html_url || github.event.pull_request.html_url }}
+            
+            Evaluation Details:
+            ${{ steps.gemini-review.outputs.text }}
