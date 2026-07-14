@@ -17,7 +17,7 @@ jobs:
       # 2. Run the AI Engine to evaluate the PR or Issue
       - name: Generate AI Evaluation
         id: gemini-review
-        uses: google-github-actions/run-gemini-cli@v1
+        uses: google-github-actions/run-gemini-cli@main
         env:
           GEMINI_TRUST_WORKSPACE: 'false'
         with:
